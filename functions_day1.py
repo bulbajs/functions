@@ -30,17 +30,63 @@
 #     x = int(input('Введите число:'))
 
 
-A = [0]*10
-top = 0
-S = 0
-x = int(input('Введите число:'))
-while x!=0 and top<10:
-    A[top]=x
-    top+=1
-    S=S+x
-    x=int(input('Введите число='))
+# A = [0]*10
+# top = 0
+# S = 0
+# x = int(input('Введите число:'))
+# while x!=0 and top<10:
+#     A[top]=x
+#     top+=1
+#     S=S+x
+#     x=int(input('Введите число='))
+#
+# print('Cумма:', S)
+# print("Введенные числа")
+# for k in range(top):
+#     print(A[k])
 
-print('Cумма:', S)
-print("Введенные числа")
-for k in range(top):
-    print(A[k])
+"""Сдвиг вправо"""
+A = [1,2,3,4,5]
+# N = int(input('Введите кол-во элементов:'))
+tmp = A[4]
+for k in range(3, -1, -1):
+    A[k+1] = A[k]
+A[0] = tmp
+print(A)
+print('-------')
+print(A[0])
+
+
+"""Сдвиг влево"""
+A=[1,2,3,4,5]
+print(A)
+print('Сдвиг влево')
+tmp = A[0]
+for k in range(0,4,1):
+    A[k] = A[k+1]
+A[4] = tmp
+print(A)
+
+
+def cyclic_right_shift(A:list, N:int):
+    """Функция сдвиг вправо"""
+    tmp = A[N-1]
+    for k in range(N-2,-1,-1):
+        A[k+1] = A[k]
+    A[0] = tmp
+    return A
+
+c= cyclic_right_shift([1,2,3,4,5],5)
+print(c)
+
+def cyclic_left_shift(A:list):
+    N = len(A)
+    tmp = A[0]
+    for k in range(0, N-1, 1):
+        A[k] = A[k+1]
+    A[N-1] = tmp
+    return A
+
+
+c = cyclic_left_shift([1, 2, 3, 4, 5])
+print(c)
