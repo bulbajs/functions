@@ -45,48 +45,101 @@
 # for k in range(top):
 #     print(A[k])
 
-"""Сдвиг вправо"""
-A = [1,2,3,4,5]
-# N = int(input('Введите кол-во элементов:'))
-tmp = A[4]
-for k in range(3, -1, -1):
-    A[k+1] = A[k]
-A[0] = tmp
-print(A)
-print('-------')
-print(A[0])
+# """Сдвиг вправо"""
+# A = [1,2,3,4,5]
+# # N = int(input('Введите кол-во элементов:'))
+# tmp = A[4]
+# for k in range(3, -1, -1):
+#     A[k+1] = A[k]
+# A[0] = tmp
+# print(A)
+# print('-------')
+# print(A[0])
+#
+#
+# """Сдвиг влево"""
+# A=[1,2,3,4,5]
+# print(A)
+# print('Сдвиг влево')
+# tmp = A[0]
+# for k in range(0,4,1):
+#     A[k] = A[k+1]
+# A[4] = tmp
+# print(A)
+#
+#
+# def cyclic_right_shift(A:list, N:int):
+#     """Функция сдвиг вправо"""
+#     tmp = A[N-1]
+#     for k in range(N-2,-1,-1):
+#         A[k+1] = A[k]
+#     A[0] = tmp
+#     return A
+#
+# c= cyclic_right_shift([1,2,3,4,5],5)
+# print(c)
+#
+# def cyclic_left_shift(A:list):
+#     N = len(A)
+#     tmp = A[0]
+#     for k in range(0, N-1, 1):
+#         A[k] = A[k+1]
+#     A[N-1] = tmp
+#     return A
+#
+#
+# c = cyclic_left_shift([1, 2, 3, 4, 5])
+# print(c)
+
+"""звездный прямоугольник размерами 5×7 (5 строк и 7 столбцов)."""
+
+# for i in range(5):
+#     print ('*' * 7)
+# print()
+#
+#
+# def draw_box():
+#     for _ in range(5):
+#         print('*'*7)
+#
+# draw_box()
+# print()
+# draw_box()
 
 
-"""Сдвиг влево"""
-A=[1,2,3,4,5]
-print(A)
-print('Сдвиг влево')
-tmp = A[0]
-for k in range(0,4,1):
-    A[k] = A[k+1]
-A[4] = tmp
-print(A)
+# def draw_box():
+#     for x in range(2):
+#         print('*' * 10)
+#         if x < 1:
+#             for x in range(12):
+#                 print('*'+8*' '+'*')
+#
+#
+# draw_box()
+
+# def draw_triangle():
+#     for x in range(1, 11):
+#         print(x*'*')
+#
+#
+# draw_triangle()
+
+# def draw_triangle():
+#     for x in range(1, 11):
+#         print('#'*x if x%2==0 else '*'*x)
+#
+#
+# draw_triangle()
 
 
-def cyclic_right_shift(A:list, N:int):
-    """Функция сдвиг вправо"""
-    tmp = A[N-1]
-    for k in range(N-2,-1,-1):
-        A[k+1] = A[k]
-    A[0] = tmp
-    return A
-
-c= cyclic_right_shift([1,2,3,4,5],5)
-print(c)
-
-def cyclic_left_shift(A:list):
-    N = len(A)
-    tmp = A[0]
-    for k in range(0, N-1, 1):
-        A[k] = A[k+1]
-    A[N-1] = tmp
-    return A
+def draw_christmas_tree():
+    print((' '*12)+'*')
+    for i in range(1,12):
+        print(' '*(12-i) + (2*i+1)*'*')
+        if i == 10:
+            for j in range(3):
+                print(' '*(i+2) + '*')
 
 
-c = cyclic_left_shift([1, 2, 3, 4, 5])
-print(c)
+
+draw_christmas_tree()
