@@ -17,7 +17,7 @@
 # print(f'Итого сумма нечетных чисел равна = {count_odds([1,2,3,4,5,6,7])}')
 # print(help(count_odds))
 
-#Массивы
+# Массивы
 
 # A=[0]*10
 # top = 0
@@ -93,6 +93,7 @@
 
 """звездный прямоугольник размерами 5×7 (5 строк и 7 столбцов)."""
 
+
 # for i in range(5):
 #     print ('*' * 7)
 # print()
@@ -132,14 +133,38 @@
 # draw_triangle()
 
 
-def draw_christmas_tree():
-    print((' '*12)+'*')
-    for i in range(1,12):
-        print(' '*(12-i) + (2*i+1)*'*')
-        if i == 10:
-            for j in range(3):
-                print(' '*(i+2) + '*')
+# def draw_christmas_tree():
+#     print((' '*12)+'*')
+#     for i in range(1,12):
+#         print(' '*(12-i) + (2*i+1)*'*')
+#         if i == 10:
+#             for j in range(3):
+#                 print(' '*(i+2) + '*')
+#
+#
+#
+# draw_christmas_tree()
+
+def draw_box(height: int, width: int):
+    for i in range(height):
+        print(width * '*')
+
+m = 5
+n = 4
+
+draw_box(m, n)
 
 
+def print_hello(txt: str, n: int):
+    print(txt * n)
 
-draw_christmas_tree()
+
+print_hello('Надеюсь, да ', 1)
+
+
+def test(x):
+    x = 100
+
+a = 3
+test(a)
+print(a)
