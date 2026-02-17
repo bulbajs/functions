@@ -143,3 +143,15 @@ def draw_christmas_tree():
 
 
 draw_christmas_tree()
+
+
+def print_sorted_hyphen(s):
+    s = s.split('-')
+    s.sort()
+    s = ('-').join(s)
+    return print(s)
+
+s = input('Введите строку: ')
+
+
+print_sorted_hyphen(s)
