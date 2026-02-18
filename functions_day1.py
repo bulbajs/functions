@@ -157,7 +157,7 @@ draw_box(m, n)
 
 def print_hello(txt: str, n: int):
     print(txt * n)
-
+     HEAD
 
 print_hello('Надеюсь, да ', 1)
 
@@ -168,3 +168,19 @@ def test(x):
 a = 3
 test(a)
 print(a)
+
+draw_christmas_tree()
+
+
+def print_sorted_hyphen(s):
+    s = s.split('-')
+    s.sort()
+    s = ('-').join(s)
+    return print(s)
+
+s = input('Введите строку: ')
+
+
+print_sorted_hyphen(s)
+
+69b257db99b59c6694dcdf5c91b06f5dceeeb738
