@@ -152,35 +152,42 @@ def draw_box(height: int, width: int):
 m = 5
 n = 4
 
-draw_box(m, n)
+# draw_box(m, n)
+#
+# #
+# # def print_hello(txt: str, n: int):
+# #     print(txt * n)
+# #
+# #
+# # print_hello('Надеюсь, да ', 1)
+#
+#
+# def test(x):
+#     x = 100
+#
+# a = 3
+# test(a)
+# print(a)
+#
+#
+#
+# def print_sorted_hyphen(s):
+#     s = s.split('-')
+#     s.sort()
+#     s = ('-').join(s)
+#     print(s)
+#
+# s = input('Введите строку: ')
+#
+#
+# print_sorted_hyphen(s)
+
+def draw_triangle(fill, base):
+    mid = base // 2
+    for i in range(1,mid+2):
+        print(fill * i)
+    for j in range(mid,0,-1):
+        print(fill * j)
 
 
-def print_hello(txt: str, n: int):
-    print(txt * n)
-     HEAD
-
-print_hello('Надеюсь, да ', 1)
-
-
-def test(x):
-    x = 100
-
-a = 3
-test(a)
-print(a)
-
-draw_christmas_tree()
-
-
-def print_sorted_hyphen(s):
-    s = s.split('-')
-    s.sort()
-    s = ('-').join(s)
-    return print(s)
-
-s = input('Введите строку: ')
-
-
-print_sorted_hyphen(s)
-
-69b257db99b59c6694dcdf5c91b06f5dceeeb738
+draw_triangle('*',5)
