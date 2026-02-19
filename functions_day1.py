@@ -191,3 +191,19 @@ def draw_triangle(fill, base):
 
 
 draw_triangle('*',5)
+
+
+# def print_perm_time_call(msc_time):
+    # msc_time =
+
+s = '14:30'
+s = s.split(':')
+hours = int(s[0])
+hours= hours + 2
+if hours>=24:
+    hours = hours - 24
+s[0] = str(hours)
+s = (':').join(s)
+print(s)
+
+
