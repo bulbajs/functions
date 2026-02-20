@@ -182,28 +182,40 @@ n = 4
 #
 # print_sorted_hyphen(s)
 
-def draw_triangle(fill, base):
-    mid = base // 2
-    for i in range(1,mid+2):
-        print(fill * i)
-    for j in range(mid,0,-1):
-        print(fill * j)
-
-
-draw_triangle('*',5)
+# def draw_triangle(fill, base):
+#     mid = base // 2
+#     for i in range(1,mid+2):
+#         print(fill * i)
+#     for j in range(mid,0,-1):
+#         print(fill * j)
+#
+#
+# draw_triangle('*',5)
 
 
 # def print_perm_time_call(msc_time):
-    # msc_time =
+#     msc_time = msc_time.split(':')
+#     hours = int(msc_time[0])
+#     hours= hours + 2
+#     if hours>=24:
+#         hours = hours - 24
+#     msc_time[0] = str(hours)
+#
+#     msc_time = (':').join(msc_time)
+#     print(f'Созвон будет в {msc_time}.')
+#
+# msc_time = input()
+#
+# print_perm_time_call(msc_time)
 
-s = '14:30'
-s = s.split(':')
-hours = int(s[0])
-hours= hours + 2
-if hours>=24:
-    hours = hours - 24
-s[0] = str(hours)
-s = (':').join(s)
+s = '1:30'
 print(s)
-
-
+s = s.split(':')
+print(len(s[0]))
+if len(s[0]) == 1:
+    s[0] = '0' + s[0]
+    print(s[0])
+    print('----')
+    print(s)
+    s = (':').join(s)
+print(s)
