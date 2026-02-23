@@ -193,29 +193,31 @@ n = 4
 # draw_triangle('*',5)
 
 
-# def print_perm_time_call(msc_time):
-#     msc_time = msc_time.split(':')
-#     hours = int(msc_time[0])
-#     hours= hours + 2
-#     if hours>=24:
-#         hours = hours - 24
-#     msc_time[0] = str(hours)
-#
-#     msc_time = (':').join(msc_time)
-#     print(f'Созвон будет в {msc_time}.')
-#
-# msc_time = input()
-#
-# print_perm_time_call(msc_time)
+def print_perm_time_call(msc_time):
+    msc_time = msc_time.split(':')
+    hours = int(msc_time[0])
+    hours= hours + 2
+    if hours>=24:
+        hours = hours - 24
+    hours = str(hours)
+    if len(hours) == 1:
+        hours = '0' + hours
+    msc_time[0] = str(hours)
+    msc_time = (':').join(msc_time)
+    print(f'Созвон будет в {msc_time}.')
 
-s = '1:30'
-print(s)
-s = s.split(':')
-print(len(s[0]))
-if len(s[0]) == 1:
-    s[0] = '0' + s[0]
-    print(s[0])
-    print('----')
-    print(s)
-    s = (':').join(s)
-print(s)
+msc_time = input()
+
+print_perm_time_call(msc_time)
+
+# s = '1:30'
+# print(s)
+# s = s.split(':')
+# print(len(s[0]))
+# if len(s[0]) == 1:
+#     s[0] = '0' + s[0]
+#     print(s[0])
+#     print('----')
+#     print(s)
+#     s = (':').join(s)
+# print(s)
