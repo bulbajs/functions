@@ -145,12 +145,12 @@
 #
 # draw_christmas_tree()
 
-def draw_box(height: int, width: int):
-    for i in range(height):
-        print(width * '*')
-
-m = 5
-n = 4
+# def draw_box(height: int, width: int):
+#     for i in range(height):
+#         print(width * '*')
+#
+# m = 5
+# n = 4
 
 # draw_box(m, n)
 #
@@ -193,22 +193,22 @@ n = 4
 # draw_triangle('*',5)
 
 
-def print_perm_time_call(msc_time):
-    msc_time = msc_time.split(':')
-    hours = int(msc_time[0])
-    hours= hours + 2
-    if hours>=24:
-        hours = hours - 24
-    hours = str(hours)
-    if len(hours) == 1:
-        hours = '0' + hours
-    msc_time[0] = str(hours)
-    msc_time = (':').join(msc_time)
-    print(f'Созвон будет в {msc_time}.')
-
-msc_time = input()
-
-print_perm_time_call(msc_time)
+# def print_perm_time_call(msc_time):
+#     msc_time = msc_time.split(':')
+#     hours = int(msc_time[0])
+#     hours= hours + 2
+#     if hours>=24:
+#         hours = hours - 24
+#     hours = str(hours)
+#     if len(hours) == 1:
+#         hours = '0' + hours
+#     msc_time[0] = str(hours)
+#     msc_time = (':').join(msc_time)
+#     print(f'Созвон будет в {msc_time}.')
+#
+# msc_time = input()
+#
+# print_perm_time_call(msc_time)
 
 # s = '1:30'
 # print(s)
@@ -221,3 +221,18 @@ print_perm_time_call(msc_time)
 #     print(s)
 #     s = (':').join(s)
 # print(s)
+
+def print_symbols_counts(s):
+    s = s.lower()
+    d = {}
+    for symbol in s:
+        if symbol in d:
+            d[symbol] += 1
+        else:
+            d[symbol] = 1
+    for symbol in sorted(d):
+        print(f'{symbol}: {d[symbol]}')
+
+s = input('Введите строку: ')
+
+print_symbols_counts(s)
