@@ -152,7 +152,7 @@ def draw_box(height: int, width: int):
 m = 5
 n = 4
 
-# draw_box(m, n)
+draw_box(m, n)
 #
 # #
 # # def print_hello(txt: str, n: int):
@@ -193,22 +193,22 @@ n = 4
 # draw_triangle('*',5)
 
 
-def print_perm_time_call(msc_time):
-    msc_time = msc_time.split(':')
-    hours = int(msc_time[0])
-    hours= hours + 2
-    if hours>=24:
-        hours = hours - 24
-    hours = str(hours)
-    if len(hours) == 1:
-        hours = '0' + hours
-    msc_time[0] = str(hours)
-    msc_time = (':').join(msc_time)
-    print(f'Созвон будет в {msc_time}.')
-
-msc_time = input()
-
-print_perm_time_call(msc_time)
+# def print_perm_time_call(msc_time):
+#     msc_time = msc_time.split(':')
+#     hours = int(msc_time[0])
+#     hours= hours + 2
+#     if hours>=24:
+#         hours = hours - 24
+#     hours = str(hours)
+#     if len(hours) == 1:
+#         hours = '0' + hours
+#     msc_time[0] = str(hours)
+#     msc_time = (':').join(msc_time)
+#     print(f'Созвон будет в {msc_time}.')
+#
+# msc_time = input()
+#
+# print_perm_time_call(msc_time)
 
 # s = '1:30'
 # print(s)
@@ -221,3 +221,5 @@ print_perm_time_call(msc_time)
 #     print(s)
 #     s = (':').join(s)
 # print(s)
+
+print('pezduk')
