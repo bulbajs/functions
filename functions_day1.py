@@ -222,4 +222,13 @@ draw_box(m, n)
 #     s = (':').join(s)
 # print(s)
 
-print('pezduk')
+def sum_digits(n):
+    sum = 0
+    while n > 0:
+        sum += n % 10
+        n = n // 10
+    return f'Cумма цифр равна = {sum}'
+
+n = int(input('Введи любое число и я просуммирую его цифры: '))
+
+print(sum_digits(n))
