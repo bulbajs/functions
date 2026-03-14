@@ -144,16 +144,16 @@
 #
 #
 # draw_christmas_tree()
-
-def draw_box(height: int, width: int):
-    for i in range(height):
-        print(width * '*')
-
-m = 5
-n = 4
-
-draw_box(m, n)
 #
+# def draw_box(height: int, width: int):
+#     for i in range(height):
+#         print(width * '*')
+#
+# m = 5
+# n = 4
+#
+# draw_box(m, n)
+# #
 # #
 # # def print_hello(txt: str, n: int):
 # #     print(txt * n)
@@ -222,13 +222,52 @@ draw_box(m, n)
 #     s = (':').join(s)
 # print(s)
 
-def sum_digits(n):
-    sum = 0
-    while n > 0:
-        sum += n % 10
-        n = n // 10
-    return f'Cумма цифр равна = {sum}'
+# def sum_digits(n):
+#     sum = 0
+#     while n > 0:
+#         sum += n % 10
+#         n = n // 10
+#     return f'Cумма цифр равна = {sum}'
+#
+# n = int(input('Введи любое число и я просуммирую его цифры: '))
+#
+# print(sum_digits(n))
 
-n = int(input('Введи любое число и я просуммирую его цифры: '))
 
-print(sum_digits(n))
+def display_message():
+    """Написать тему главы"""
+    print('Определение функции')
+
+# display_message()
+# help(display_message)
+
+
+def favorite_book(title):
+    """Выводит название книги"""
+    print(f'One of my favorite books is {title}')
+
+# title = input('Введи название книги:')
+
+# favorite_book(title)
+
+def describe_pet(pet_name, animal_type='cat'):
+    """Выводит информацию о животном."""
+    print("\nI have a " + animal_type + ".")
+    print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+
+# describe_pet('Hooxy')
+# describe_pet('rex','cat')
+
+def get_formatted_name(first_name, last_name, middle_name=''):
+    """Возвращает аккуратно отформатированное полное имя."""
+    if middle_name:
+        full_name = first_name + ' ' + middle_name + ' ' + last_name
+    # else:
+    #     full_name = first_name + ' ' + last_name
+    return full_name.title()
+
+
+musician = get_formatted_name('jimi', 'hendrix')
+print(musician)
+musician = get_formatted_name('john', 'hooker', 'lee')
+print(musician)
