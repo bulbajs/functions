@@ -258,16 +258,73 @@ def describe_pet(pet_name, animal_type='cat'):
 # describe_pet('Hooxy')
 # describe_pet('rex','cat')
 
-def get_formatted_name(first_name, last_name, middle_name=''):
-    """Возвращает аккуратно отформатированное полное имя."""
-    if middle_name:
-        full_name = first_name + ' ' + middle_name + ' ' + last_name
-    # else:
-    #     full_name = first_name + ' ' + last_name
-    return full_name.title()
+# def get_formatted_name(first_name, last_name, middle_name=''):
+#     """Возвращает аккуратно отформатированное полное имя."""
+#     if middle_name:
+#         full_name = first_name + ' ' + middle_name + ' ' + last_name
+#     # else:
+#     #     full_name = first_name + ' ' + last_name
+#     return full_name.title()
 
 
-musician = get_formatted_name('jimi', 'hendrix')
-print(musician)
-musician = get_formatted_name('john', 'hooker', 'lee')
-print(musician)
+# musician = get_formatted_name('jimi', 'hendrix')
+# print(musician)
+# musician = get_formatted_name('john', 'hooker', 'lee')
+# print(musician)
+
+
+# def build_person(fisrt_name, last_name, age=''):
+#     """Возвращает имя и фамилию"""
+#     person = {'first':fisrt_name, 'last': last_name}
+#     if age:
+#         person['age'] = age
+#     return person
+#
+# mate = build_person('Bob','Kent', 28)
+#
+# print(mate)
+
+
+# def get_formatted_name(first_name, last_name):
+#     """Возвращает аккуратно отформатированное полное имя."""
+#     full_name = first_name + ' ' + last_name
+#     return full_name.title()
+#
+# # Бесконечный цикл!
+# while True:
+#     print("\nPlease tell me your name:")
+#     f_name = input("First name: ")
+#     l_name = input("Last name: ")
+#
+#     formatted_name = get_formatted_name(f_name, l_name)
+#     print("\nHello, " + formatted_name + "!")
+
+# def get_formatted_name(first_name, last_name):
+#     """Возвращает аккуратно отформатированное полное имя."""
+#     full_name = first_name + ' ' + last_name
+#     return full_name.title()
+#
+#
+# while True:
+#     print("\nPlease tell me your name:")
+#     print("(enter 'q' at any time to quit)")
+#
+#     f_name = input("First name: ")
+#     if f_name == 'q':
+#         break
+#
+#     l_name = input("Last name: ")
+#     if l_name == 'q':
+#         break
+#
+#     formatted_name = get_formatted_name(f_name,l_name)
+#     print(f'Hello, {formatted_name}! ')
+#
+
+def city_country(city, country):
+    list = city + ', ' + country
+    return list.title()
+
+list1 = city_country('moscow','russia')
+
+print(list1)
