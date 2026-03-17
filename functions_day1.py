@@ -329,26 +329,46 @@ def describe_pet(pet_name, animal_type='cat'):
 #
 # print(list1)
 
-def make_album(musician_name, album_name, track_count=None):
-    album = {'musician_n':musician_name, 'album_n':album_name}
-    if track_count:
-        album['track_count'] = track_count
-    return album
-
-while True:
-    print('Введите название альбома и исполнителя')
-    mus_n = input('Имя исполнителя: ')
-    if mus_n == 'q':
-        break
-
-    alb_n = input('Название альбома: ')
-    track_c = int(input('Кол-во треков: '))
-
-    formatted_name = make_album(mus_n, alb_n, track_c)
-    print(formatted_name)
-print('ты сам вышел')
+# def make_album(musician_name, album_name, track_count=None):
+#     album = {'musician_n':musician_name, 'album_n':album_name}
+#     if track_count:
+#         album['track_count'] = track_count
+#     return album
+#
+# while True:
+#     print('Введите название альбома и исполнителя')
+#     mus_n = input('Имя исполнителя: ')
+#     if mus_n == 'q':
+#         break
+#
+#     alb_n = input('Название альбома: ')
+#     track_c = int(input('Кол-во треков: '))
+#
+#     formatted_name = make_album(mus_n, alb_n, track_c)
+#     print(formatted_name)
+# print('ты сам вышел')
 
 # result = make_album('Enrique Iglesias','Hero')
 # print(result)
 # result2= make_album('One republic', 'Stop and Stare', 15)
 # print(result2)
+
+
+# def greet_list(fruits):
+#     """Возвращает список фруктов"""
+#     for name in fruits:
+#         print(f'Вот эти фрукт вкусный {name}')
+#
+# fruits = ['киви','груша', 'манго']
+# result = greet_list(fruits)
+# print(result)
+
+
+def greet_list(fruits):
+    """Возвращает список фруктов"""
+    for name in fruits:
+        msg = 'Этот фрукт вкусный:' + name.title()
+        print(msg)
+
+list_fruits = ['киви','груша', 'манго']
+greet_list(list_fruits)
