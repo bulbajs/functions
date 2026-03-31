@@ -372,3 +372,16 @@ def greet_list(fruits):
 
 list_fruits = ['киви','груша', 'манго']
 greet_list(list_fruits)
+
+
+def print_models(unprinted_designs, completed_models):
+    """
+    Имитирует печать моделей, пока список не станет пустым.
+    Каждая модель после печати перемещается в completed_models.
+    """
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+
+        # Имитация печати модели на 3D-принтере.
+        print("Printing model: " + current_design)
+        completed_models.append(current_design)
