@@ -363,55 +363,12 @@ def describe_pet(pet_name, animal_type='cat'):
 # result = greet_list(fruits)
 # print(result)
 
-#
-# def greet_list(fruits):
-#     """Возвращает список фруктов"""
-#     for name in fruits:
-#         msg = 'Этот фрукт вкусный:' + name.title()
-#         print(msg)
-#
-# list_fruits = ['киви','груша', 'манго']
-# greet_list(list_fruits)
 
+def greet_list(fruits):
+    """Возвращает список фруктов"""
+    for name in fruits:
+        msg = 'Этот фрукт вкусный:' + name.title()
+        print(msg)
 
-# def printing_models(models):
-#     for model in models:
-#         print(f'Сейчас печатается + {model.title()}')
-#
-# while models:
-
-# numbers = [1,2,3]
-# x = numbers.pop(1)
-# print(f'{x} и {numbers}')
-# numbers.append(4)
-# print(numbers)
-
-def printing_models(unprinted_designs):
-    completed_models = []
-    while unprinted_designs:
-        current_design = unprinted_designs.pop()
-        completed_models.append(current_design)
-    return completed_models
-
-unprinted_designs = ['шоссе', 'по', 'Саша', 'Шла']
-
-def enter_models(completed_models):
-    for n in completed_models:
-        print(n)
-
-completed_models = printing_models(unprinted_designs)
-enter_models(completed_models)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+list_fruits = ['киви','груша', 'манго']
+greet_list(list_fruits)
