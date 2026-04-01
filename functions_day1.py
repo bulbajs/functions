@@ -372,3 +372,22 @@ def greet_list(fruits):
 
 list_fruits = ['киви','груша', 'манго']
 greet_list(list_fruits)
+
+
+def printing_models(unprinted_designs):
+    completed_designs = []
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+        completed_designs.append(current_design)
+    return completed_designs
+
+
+unprinted_designs = ['Y', 'E', 'N', 'O', 'H']
+
+def enter_models(completed_designs):
+    for n in completed_designs:
+        print(n)
+
+
+completed_designs = printing_models(unprinted_designs)
+enter_models(completed_designs)
