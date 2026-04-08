@@ -364,30 +364,108 @@ def describe_pet(pet_name, animal_type='cat'):
 # print(result)
 
 
-def greet_list(fruits):
-    """Возвращает список фруктов"""
-    for name in fruits:
-        msg = 'Этот фрукт вкусный:' + name.title()
-        print(msg)
+# def greet_list(fruits):
+#     """Возвращает список фруктов"""
+#     for name in fruits:
+#         msg = 'Этот фрукт вкусный:' + name.title()
+#         print(msg)
+#
+# list_fruits = ['киви','груша', 'манго']
+# greet_list(list_fruits)
+#
+#
+# def printing_models(unprinted_designs):
+#     completed_designs = []
+#     while unprinted_designs:
+#         current_design = unprinted_designs.pop()
+#         completed_designs.append(current_design)
+#     return completed_designs
+#
+#
+# unprinted_designs = ['Y', 'E', 'N', 'O', 'H']
+#
+# def enter_models(completed_designs):
+#     for n in completed_designs:
+#         print(n)
+#
+#
+# completed_designs = printing_models(unprinted_designs)
+# enter_models(completed_designs)
 
-list_fruits = ['киви','груша', 'манго']
-greet_list(list_fruits)
+# Как сде
+# def show_names(names):
+#     for n in names:
+#         print(n+"\n"+"-----")
+# names = ['Petya', 'Daniil', 'Alesha', 'Petrosyan']
+# show_names(names)
+
+# def greet_users(users):
+#     for n in users:
+#         print (f'Hello epta, {n}! ')
+#
+# users = ['Petya', 'Daniil', 'Alesha', 'Petrosyan']
+#
+# greet_users(users)
+
+# def move_numbers(numbers, processed_numbers):
+#     while numbers:
+#         current_list = numbers.pop()
+#         processed_numbers.append(current_list)
+#
+# numbers = [1,2,3,4,5]
+# processed_numbers = []
+#
+# move_numbers(numbers,processed_numbers)
+#
+# print('numbers:', numbers)
+# print('processed_numbers:', processed_numbers)
+
+# def print_models(unprinted_designs, completed_models):
+#     while unprinted_designs:
+#         current_list = unprinted_designs.pop()
+#         completed_models.append(current_list)
+#
+# unprinted_designs = ['pop','append', 'time']
+# completed_models = []
+#
+# def show_completed_models(completed_models):
+#     for model in completed_models:
+#         print(model)
+#
+# print_models(unprinted_designs, completed_models)
+# show_completed_models(completed_models)
 
 
-def printing_models(unprinted_designs):
-    completed_designs = []
+# def print_models(unprinted_designs, completed_models):
+#     while unprinted_designs:
+#         current_list = unprinted_designs.pop()
+#         completed_models.append(current_list)
+#
+# unprinted_designs = ['pop','append', 'time']
+# completed_models = []
+#
+# def show_completed_models(completed_models):
+#     for model in completed_models:
+#         print(model)
+#
+# print_models(unprinted_designs, completed_models)
+# print(unprinted_designs)
+# show_completed_models(completed_models)
+
+def print_models(unprinted_designs, completed_models):
     while unprinted_designs:
-        current_design = unprinted_designs.pop()
-        completed_designs.append(current_design)
-    return completed_designs
+        # current_list = unprinted_designs.pop()
+        # completed_models.append(current_list)
+        completed_models.append(unprinted_designs.pop())
 
+unprinted_designs = ['pop','append', 'time']
+completed_models = []
 
-unprinted_designs = ['Y', 'E', 'N', 'O', 'H']
+def show_completed_models(completed_models):
+    for model in completed_models:
+        print(model)
 
-def enter_models(completed_designs):
-    for n in completed_designs:
-        print(n)
-
-
-completed_designs = printing_models(unprinted_designs)
-enter_models(completed_designs)
+print_models(unprinted_designs[:], completed_models)
+print(unprinted_designs)
+print(unprinted_designs[:])
+show_completed_models(completed_models)
