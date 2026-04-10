@@ -452,20 +452,48 @@ def describe_pet(pet_name, animal_type='cat'):
 # print(unprinted_designs)
 # show_completed_models(completed_models)
 
-def print_models(unprinted_designs, completed_models):
-    while unprinted_designs:
-        # current_list = unprinted_designs.pop()
-        # completed_models.append(current_list)
-        completed_models.append(unprinted_designs.pop())
+# def print_models(unprinted_designs, completed_models):
+#     while unprinted_designs:
+#         # current_list = unprinted_designs.pop()
+#         # completed_models.append(current_list)
+#         completed_models.append(unprinted_designs.pop())
+#
+# unprinted_designs = ['pop','append', 'time']
+# completed_models = []
+#
+# def show_completed_models(completed_models):
+#     for model in completed_models:
+#         print(model)
+#
+# print_models(unprinted_designs[:], completed_models)
+# print(unprinted_designs)
+# print(unprinted_designs[:])
+# show_completed_models(completed_models)
 
-unprinted_designs = ['pop','append', 'time']
-completed_models = []
+#=====Task 7-8=====
+def make_great(magicians):
+    for i in range(len(magicians)):
+        magicians[i] = 'Great ' + magicians[i]
+    # print(magicians)
 
-def show_completed_models(completed_models):
-    for model in completed_models:
-        print(model)
+magicians = ['Bob', 'Dilan', 'Garry']
 
-print_models(unprinted_designs[:], completed_models)
-print(unprinted_designs)
-print(unprinted_designs[:])
-show_completed_models(completed_models)
+
+def show_magicians(magicians):
+    for n in magicians:
+        print(n)
+
+# print('---before---')
+# show_magicians(magicians)
+# make_great(magicians)
+# print('---after---')
+# show_magicians(magicians)
+
+
+#=====Task 9=====
+# Новый список без изменения исходного
+# Создай список фокусников. Напиши функцию
+# make_great(magicians), которая создаёт новый
+# список с приставкой "Great " и возвращает его.
+# Выведи исходный и новый списки.
+def 
