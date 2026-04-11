@@ -471,23 +471,23 @@ def describe_pet(pet_name, animal_type='cat'):
 # show_completed_models(completed_models)
 
 #=====Task 7-8=====
-def make_great(magicians):
-    for i in range(len(magicians)):
-        magicians[i] = 'Great ' + magicians[i]
-    # print(magicians)
-
-magicians = ['Bob', 'Dilan', 'Garry']
-
-
-def show_magicians(magicians):
-    for n in magicians:
-        print(n)
-
-# print('---before---')
-# show_magicians(magicians)
-# make_great(magicians)
-# print('---after---')
-# show_magicians(magicians)
+# def make_great(magicians):
+#     for i in range(len(magicians)):
+#         magicians[i] = 'Great ' + magicians[i]
+#     # print(magicians)
+#
+# magicians = ['Bob', 'Dilan', 'Garry']
+#
+#
+# def show_magicians(magicians):
+#     for n in magicians:
+#         print(n)
+#
+# # print('---before---')
+# # show_magicians(magicians)
+# # make_great(magicians)
+# # print('---after---')
+# # show_magicians(magicians)
 
 
 #=====Task 9=====
@@ -496,4 +496,49 @@ def show_magicians(magicians):
 # make_great(magicians), которая создаёт новый
 # список с приставкой "Great " и возвращает его.
 # Выведи исходный и новый списки.
-def 
+# def make_greats(magicians):
+#     new_list = []
+#     for i in magicians:
+#         i = 'Great ' + i
+#         new_list.append(i)
+#     return new_list
+#
+#
+# magicians = ['Bob','Edward','Nikolya']
+#
+# print(magicians)
+# great_magicians = make_greats(magicians)
+# print(great_magicians)
+
+#=====Task 10=====
+
+def big_products(products, purchased):
+    while products:
+        cur = products.pop()
+        purchased.append(cur)
+    return purchased
+
+
+products = ['kiwi', 'strawberry', 'blackcurrunt']
+purchased = []
+
+
+
+def show_list(items):
+    for item in items:
+        print(item)
+
+
+def make_uppercase(items):
+    new_list = []
+    for i in items:
+        i = i.upper()
+        new_list.append(i)
+    return new_list
+
+
+list_products = big_products(products[:], purchased)
+print(list_products)
+show_list(purchased)
+new_l = make_uppercase(purchased)
+print(new_l)
