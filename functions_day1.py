@@ -542,3 +542,8 @@ print(list_products)
 show_list(purchased)
 new_l = make_uppercase(purchased)
 print(new_l)
+
+class Dog():
+
+    def __init__(self,name,age):
+        pass
