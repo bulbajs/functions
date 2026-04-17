@@ -510,40 +510,80 @@ def describe_pet(pet_name, animal_type='cat'):
 # great_magicians = make_greats(magicians)
 # print(great_magicians)
 
-#=====Task 10=====
+# #=====Task 10=====
+#
+# def big_products(products, purchased):
+#     while products:
+#         cur = products.pop()
+#         purchased.append(cur)
+#     return purchased
+#
+#
+# products = ['kiwi', 'strawberry', 'blackcurrunt']
+# purchased = []
+#
+#
+#
+# def show_list(items):
+#     for item in items:
+#         print(item)
+#
+#
+# def make_uppercase(items):
+#     new_list = []
+#     for i in items:
+#         i = i.upper()
+#         new_list.append(i)
+#     return new_list
+#
+#
+# list_products = big_products(products[:], purchased)
+# print(list_products)
+# show_list(purchased)
+# new_l = make_uppercase(purchased)
+# print(new_l)
+#
+# class Dog():
+#
+#     def __init__(self,name,age):
+#         pass
 
-def big_products(products, purchased):
-    while products:
-        cur = products.pop()
-        purchased.append(cur)
-    return purchased
 
+class Cat():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-products = ['kiwi', 'strawberry', 'blackcurrunt']
-purchased = []
+    def info(self):
+        print(f'Имя нашего кота:{self.name}, а годиков ему: {self.age}')
 
+    def meow(self):
+        print(f'{self.name} говорит "Мяу"')
 
+cat1 = Cat('Hooxik', 2.5)
+cat2 = Cat('Gendalf', 99)
 
-def show_list(items):
-    for item in items:
-        print(item)
+cat1.info()
+cat1.meow()
+cat2.meow()
 
+# =====Task 4=====
+# Создай класс Car: brand, speed Метод drive()
+# Добавь метод: increase_speed(value) - увеличивает скорость
 
-def make_uppercase(items):
-    new_list = []
-    for i in items:
-        i = i.upper()
-        new_list.append(i)
-    return new_list
+class Car():
+    def __init__(self, brand, speed:int):
+        self.brand = brand
+        self.speed = speed
 
+    def drive(self):
+        print(f'{self.brand} is driving at {self.speed} km/h')
 
-list_products = big_products(products[:], purchased)
-print(list_products)
-show_list(purchased)
-new_l = make_uppercase(purchased)
-print(new_l)
+    def increase_speed(self, value):
+        self.speed = self.speed + value
+        print(f'Нажимаем газ и скорость увеличивается до {self.speed} км/ч')
 
-class Dog():
+car1 = Car('Tiguan', 180)
 
-    def __init__(self,name,age):
-        pass
+car1.increase_speed(190)
+car1.drive()
