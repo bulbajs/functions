@@ -549,41 +549,114 @@ def describe_pet(pet_name, animal_type='cat'):
 #         pass
 
 
-class Cat():
-    def __init__(self, name, age):
+# class Cat():
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def info(self):
+#         print(f'Имя нашего кота:{self.name}, а годиков ему: {self.age}')
+#
+#     def meow(self):
+#         print(f'{self.name} говорит "Мяу"')
+#
+# cat1 = Cat('Hooxik', 2.5)
+# cat2 = Cat('Gendalf', 99)
+#
+# cat1.info()
+# cat1.meow()
+# cat2.meow()
+#
+# # =====Task 4=====
+# # Создай класс Car: brand, speed Метод drive()
+# # Добавь метод: increase_speed(value) - увеличивает скорость
+#
+# class Car():
+#     def __init__(self, brand, speed:int):
+#         self.brand = brand
+#         self.speed = speed
+#
+#     def drive(self):
+#         print(f'{self.brand} is driving at {self.speed} km/h')
+#
+#     def increase_speed(self, value):
+#         self.speed = self.speed + value
+#         print(f'Нажимаем газ и скорость увеличивается до {self.speed} км/ч')
+#
+# car1 = Car('Tiguan', 180)
+#
+# car1.increase_speed(190)
+# car1.drive()
+#
+#
+# # =====Task 6=====
+# class Student():
+#     def __init__(self,name, grade):
+#         self.name = name
+#         self.grade = grade
+#
+#     def is_passed(self):
+#         if self.grade >= 60:
+#             print(f'{self.name} "Passed"')
+#         else:
+#             print(f'{self.name} "Failed"')
+#
+# stud1 = Student('Kent', 56)
+# stud2 = Student('Pen', 75)
+# stud3 = Student('Larry', 60)
+#
+# print(stud1.is_passed(), stud1.name)
+# stud2.is_passed()
+# stud3.is_passed()
+
+
+# =====Task 7=====
+class Student():
+    def __init__(self,name, grade):
         self.name = name
-        self.age = age
+        self.grade = grade
 
-    def info(self):
-        print(f'Имя нашего кота:{self.name}, а годиков ему: {self.age}')
+    def is_passed(self):
+        if self.grade >= 60:
+            print(f'{self.name} "Passed"')
+        else:
+            print(f'{self.name} "Failed"')
 
-    def meow(self):
-        print(f'{self.name} говорит "Мяу"')
 
-cat1 = Cat('Hooxik', 2.5)
-cat2 = Cat('Gendalf', 99)
+# stud1 = Student('Kent', 56)
+# stud2 = Student('Pen', 75)
+# stud3 = Student('Larry', 60)
+# students = [stud1,stud2, stud3]
+# for s in students:
+#     s.is_passed()
 
-cat1.info()
-cat1.meow()
-cat2.meow()
 
-# =====Task 4=====
-# Создай класс Car: brand, speed Метод drive()
-# Добавь метод: increase_speed(value) - увеличивает скорость
+class BankAccount():
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
 
-class Car():
-    def __init__(self, brand, speed:int):
-        self.brand = brand
-        self.speed = speed
+    def deposit(self, amount):
+        # self.amount = amount
+        self.balance = self.balance + amount
+        print(f'ПОПОЛНЕНИЕ. +{amount} РУБ. Ваш новый баланс: {self.balance}')
 
-    def drive(self):
-        print(f'{self.brand} is driving at {self.speed} km/h')
+    def withdraw(self, amount):
+        # self.amount = amount
+        if amount > self.balance:
+            print('Недостаточно средств')
+        else:
+            self.balance = self.balance - amount
+            print(f'ПОКУПКА. -{amount} РУБ. Ваш новый баланс: {self.balance}')
 
-    def increase_speed(self, value):
-        self.speed = self.speed + value
-        print(f'Нажимаем газ и скорость увеличивается до {self.speed} км/ч')
 
-car1 = Car('Tiguan', 180)
+    def sms(self):
+        print(f'{self.owner}, Ваш баланс составляет {self.balance} РУБ.')
 
-car1.increase_speed(190)
-car1.drive()
+
+bank1 = BankAccount('Genry', 23500)
+
+bank1.sms()
+bank1.deposit(1000000)
+bank1.withdraw(60000)
+bank1.withdraw(1000000000)
