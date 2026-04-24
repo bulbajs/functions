@@ -656,7 +656,83 @@ class BankAccount():
 
 bank1 = BankAccount('Genry', 23500)
 
-bank1.sms()
-bank1.deposit(1000000)
-bank1.withdraw(60000)
-bank1.withdraw(1000000000)
+# bank1.sms()
+# bank1.deposit(1000000)
+# bank1.withdraw(60000)
+# bank1.withdraw(1000000000)
+
+
+class Employee():
+    def __init__(self, name:str, salary:int):
+        self.name = name
+        self.salary = salary
+
+    def info(self):
+        print(f'{self.name} получает на своей работе скромные {self.salary}к')
+
+
+    def apply_bonus(self, percent):
+        self.salary = self.salary * ((percent + 100)/100)
+        print(f'{self.name} получил прибавку к зарплате в качестве {percent}%. Его текущая зарплата стала {self.salary:2f}к')
+
+empl1 = Employee('Петр', 60)
+
+
+# empl1.info()
+# empl1.apply_bonus(20)
+# empl1.apply_bonus(10)
+
+
+class Animal():
+    def __init__(self, name):
+        self.name = name
+
+    def info(self):
+        print(f'{self.name} - кличка животного')
+
+    def make_sound(self):
+        print(f'{self.name} издает какой-то звук')
+
+
+class Dog(Animal):
+    def __init__(self, name):
+     super().__init__(name)
+
+    def make_sound(self):
+        print(f'Собака не просто издает звуки, а "лает"')
+
+
+# anim1 = Animal('Billy')
+# anim2 = Dog('Rex')
+#
+# anim1.info()
+# anim1.make_sound()
+# # anim1.Dog.make_sound()
+# anim2.make_sound()
+# anim2.info()
+
+class Vehicle():
+    def __init__(self, brand):
+        self.brand = brand
+
+    def info(self):
+        print(f'Транспорт марки {self.brand}')
+
+    def start(self):
+        print(f'Транспорт марки {self.brand} начал движение')
+
+class Car(Vehicle):
+    def __init__(self, brand):
+        super().__init__(brand)
+
+    def drive(self):
+        print(f'Автомобиль {self.brand} в пути')
+
+Veh1 = Vehicle('BMW')
+Car1 = Car('Tiguan')
+
+
+Veh1.start()
+Car1.start()
+Car1.drive()
+Car1.info()
