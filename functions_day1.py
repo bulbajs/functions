@@ -732,7 +732,56 @@ Veh1 = Vehicle('BMW')
 Car1 = Car('Tiguan')
 
 
-Veh1.start()
-Car1.start()
-Car1.drive()
-Car1.info()
+# Veh1.start()
+# Car1.start()
+# Car1.drive()
+# Car1.info()
+
+# =====Task 2=====  Person → Employee Person: name Employee(Person): salary  используй super() добавь метод info()
+
+class Person():
+    def __init__(self, name):
+        self.name = name
+
+    def info(self):
+        print(f'{self.name} кушает арбузик каждый день и не ходит на работу')
+
+class Employee(Person):
+    def __init__(self,name,salary):
+        super().__init__(name)
+        self.salary = salary
+    def info(self):
+        super().info()
+        print(f'{self.name} ходит на работу и получают зп {self.salary}, нет времени кушать арбузики')
+
+
+# pers1 = Person('Mike')
+# pers2 = Employee('Steev',100)
+# pers1.info()
+# pers2.info()
+
+
+# =====Task 3=====   Book → EBook  Book: title, author EBook(Book): file_size  выведи полную информацию
+class Book():
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+
+    def info(self):
+        print(f'Название книги: {self.title} , Писатель: {self.author}:')
+
+class EBook(Book):
+    def __init__(self,title, author, file_size):
+        super().__init__(title,author)
+        self.file_size = file_size
+
+    def info(self):
+        super().info()
+        print(f'Размер книги: {self.file_size} Мб')
+
+book1 = Book('"Пышка"', 'Ги де Мопассан')
+book2 = EBook('"Пышка"', 'Ги де Мопассан',2)
+
+book1.info()
+print('--------')
+book2.info()
