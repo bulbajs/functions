@@ -779,9 +779,16 @@ class EBook(Book):
         super().info()
         print(f'Размер книги: {self.file_size} Мб')
 
-book1 = Book('"Пышка"', 'Ги де Мопассан')
-book2 = EBook('"Пышка"', 'Ги де Мопассан',2)
+# book1 = Book('"Пышка"', 'Ги де Мопассан')
+# book2 = EBook('"Пышка"', 'Ги де Мопассан',2)
+#
+# book1.info()
+# print('--------')
+# book2.info()
 
-book1.info()
-print('--------')
-book2.info()
+
+# =====Task 3=====  Car → ElectricCar в Car: метод fuel_type() → "Gasoline"
+# в ElectricCar: переопредели → "Electric" вызвать метод и увидеть разницу
+
+class Car():
+    def
