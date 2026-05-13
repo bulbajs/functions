@@ -683,6 +683,9 @@ empl1 = Employee('Петр', 60)
 # empl1.apply_bonus(10)
 
 
+#####-----------CLASS-----------#####
+
+#=====Task 1=====
 class Animal():
     def __init__(self, name):
         self.name = name
@@ -711,6 +714,7 @@ class Dog(Animal):
 # anim2.make_sound()
 # anim2.info()
 
+#=====Task 2=====
 class Vehicle():
     def __init__(self, brand):
         self.brand = brand
@@ -737,7 +741,7 @@ Car1 = Car('Tiguan')
 # Car1.drive()
 # Car1.info()
 
-# =====Task 2=====  Person → Employee Person: name Employee(Person): salary  используй super() добавь метод info()
+# =====Task 3=====  Person → Employee Person: name Employee(Person): salary  используй super() добавь метод info()
 
 class Person():
     def __init__(self, name):
@@ -761,7 +765,7 @@ class Employee(Person):
 # pers2.info()
 
 
-# =====Task 3=====   Book → EBook  Book: title, author EBook(Book): file_size  выведи полную информацию
+# =====Task 4=====   Book → EBook  Book: title, author EBook(Book): file_size  выведи полную информацию
 class Book():
     def __init__(self, title, author):
         self.title = title
@@ -787,8 +791,101 @@ class EBook(Book):
 # book2.info()
 
 
-# =====Task 3=====  Car → ElectricCar в Car: метод fuel_type() → "Gasoline"
+# =====Task 5=====  Car → ElectricCar в Car: метод fuel_type() → "Gasoline"
 # в ElectricCar: переопредели → "Electric" вызвать метод и увидеть разницу
 
+# class Car():
+#     def __init__(self, brand):
+#         self.brand = brand
+#
+#     def info(self):
+#         print(f'{self.brand} машинка')
+#
+#     def fuel_type(self):
+#         print(f'Автомобиль {self.brand} едет на бензине')
+#
+# class Electric(Car):
+#     def __init__(self,brand):
+#         super().__init__(brand)
+#
+#     def fuel_type(self):
+#         print(f'Автомобиль {self.brand} работает на электричестве')
+
+# car1 = Car('Tiguan')
+# car1.info()
+# car1.fuel_type()
+# elcar1 = Electric('Zeecr')
+# elcar1.info()
+# elcar1.fuel_type()
+
+
+#=====Task 6===== Worker → Manager _Worker: метод work() → "Working" Manager: переопредели → "Managing team"
+class Worker():
+    def __init__(self, name):
+        self.name = name
+
+    def info(self):
+        print(f'{self.name} обычный работяга')
+
+    def work(self):
+        print(f'Статус работы у сотрудника {self.name}: Working')
+
+
+class Manager(Worker):
+    def __init__(self, name):
+        super().__init__(name)
+
+    def info(self):
+        print(f'{self.name} менеджер')
+
+    def work(self):
+        print(f'Статус работы у сотрудника {self.name}: Managing team')
+
+# work1 = Worker('Petr')
+# work1.info()
+# work1.work()
+# man1 = Manager('Masha')
+# man1.info()
+# man1.work()
+
+#=====Task 7=====
+#Создай:Класс Engine Engine: power метод describe() Car: содержит Engine (self.engine = Engine(...))
+# вызови: car.engine.describe()
+
+
+
 class Car():
-    def
+    def __init__(self, brand, power):
+        self.brand = brand
+        self.engine = Engine(power)
+
+    def info(self):
+        print(f'{self.brand} машинка')
+
+    def fuel_type(self):
+        print(f'Автомобиль {self.brand} едет на бензине')
+
+class Engine():
+    def __init__(self, power):
+        self.power = power
+
+    def describe(self):
+        print(f'Мощность двигателя  {self.power} ')
+
+class Electric(Car):
+    def __init__(self,brand, power):
+        super().__init__(brand,power)
+
+    def fuel_type(self):
+        print(f'Автомобиль {self.brand} работает на электричестве')
+
+
+car1 = Car('Tiguan','2.0 TSI : 180 л.с.')
+car1.info()
+car1.fuel_type()
+
+car1.engine.describe()
+print(car1.power)
+# elcar1 = Electric('Zeecr')
+# elcar1.info()
+# elcar1.fuel_type()
