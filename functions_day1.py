@@ -631,30 +631,30 @@ class Student():
 #     s.is_passed()
 
 
-class BankAccount():
-    def __init__(self, owner, balance):
-        self.owner = owner
-        self.balance = balance
-
-    def deposit(self, amount):
-        # self.amount = amount
-        self.balance = self.balance + amount
-        print(f'ПОПОЛНЕНИЕ. +{amount} РУБ. Ваш новый баланс: {self.balance}')
-
-    def withdraw(self, amount):
-        # self.amount = amount
-        if amount > self.balance:
-            print('Недостаточно средств')
-        else:
-            self.balance = self.balance - amount
-            print(f'ПОКУПКА. -{amount} РУБ. Ваш новый баланс: {self.balance}')
-
-
-    def sms(self):
-        print(f'{self.owner}, Ваш баланс составляет {self.balance} РУБ.')
-
-
-bank1 = BankAccount('Genry', 23500)
+# class BankAccount():
+#     def __init__(self, owner, balance):
+#         self.owner = owner
+#         self.balance = balance
+#
+#     def deposit(self, amount):
+#         # self.amount = amount
+#         self.balance = self.balance + amount
+#         print(f'ПОПОЛНЕНИЕ. +{amount} РУБ. Ваш новый баланс: {self.balance}')
+#
+#     def withdraw(self, amount):
+#         # self.amount = amount
+#         if amount > self.balance:
+#             print('Недостаточно средств')
+#         else:
+#             self.balance = self.balance - amount
+#             print(f'ПОКУПКА. -{amount} РУБ. Ваш новый баланс: {self.balance}')
+#
+#
+#     def sms(self):
+#         print(f'{self.owner}, Ваш баланс составляет {self.balance} РУБ.')
+#
+#
+# bank1 = BankAccount('Genry', 23500)
 
 # bank1.sms()
 # bank1.deposit(1000000)
@@ -852,7 +852,46 @@ class Manager(Worker):
 #Создай:Класс Engine Engine: power метод describe() Car: содержит Engine (self.engine = Engine(...))
 # вызови: car.engine.describe()
 
+# class Car():
+#     def __init__(self, brand, power):
+#         self.brand = brand
+#         self.engine = Engine(power)
+#
+#     def info(self):
+#         print(f'{self.brand} машинка')
+#
+#     def fuel_type(self):
+#         print(f'Автомобиль {self.brand} едет на бензине')
+#
+# class Engine():
+#     def __init__(self, power):
+#         self.power = power
+#
+#     def describe(self):
+#         print(f'Мощность двигателя  {self.power} ')
+#
+# class Electric(Car):
+#     def __init__(self,brand, power):
+#         super().__init__(brand,power)
+#
+#     def fuel_type(self):
+#         print(f'Автомобиль {self.brand} работает на электричестве')
+#
+#
+# car1 = Car('Tiguan','2.0 TSI : 180 л.с.')
+# car1.info()
+# car1.fuel_type()
+#
+# car1.engine.describe()
+# print(car1.power)
+# elcar1 = Electric('Zeecr')
+# elcar1.info()
+# elcar1.fuel_type()
 
+
+#===== Task 8 =====
+# Класс Battery (как в книге) Сделай: Battery: size метод get_range() ElectricCar: self.battery = Battery()
+# вывести запас хода
 
 class Car():
     def __init__(self, brand, power):
@@ -872,20 +911,108 @@ class Engine():
     def describe(self):
         print(f'Мощность двигателя  {self.power} ')
 
+class Battery():
+    def __init__(self, size=70):
+        self.size = size
+
+    def get_range(self):
+        print(f'Запас хода у  {self.size} %')
+
 class Electric(Car):
     def __init__(self,brand, power):
         super().__init__(brand,power)
+        self.battery = Battery()
 
     def fuel_type(self):
         print(f'Автомобиль {self.brand} работает на электричестве')
 
 
-car1 = Car('Tiguan','2.0 TSI : 180 л.с.')
-car1.info()
-car1.fuel_type()
-
-car1.engine.describe()
-print(car1.power)
-# elcar1 = Electric('Zeecr')
+# car1 = Car('Tiguan','2.0 TSI : 180 л.с.')
+# car1.info()
+# car1.fuel_type()
+#
+# car1.engine.describe()
+# print(car1.engine.power)
+# elcar1 = Electric('Zeecr','500 kW')
 # elcar1.info()
 # elcar1.fuel_type()
+# elcar1.battery.get_range()
+
+
+#===== Task 9 =====
+# BankAccount + проверка Сделай: BankAccount PremiumAccount(BankAccount)  в премиум:
+# можно уходить в минус (например до -1000) А в обычном — нельзя
+
+class BankAccount():
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self, amount):
+        # self.amount = amount
+        self.balance = self.balance + amount
+        print(f'ПОПОЛНЕНИЕ. +{amount} РУБ. Ваш новый баланс: {self.balance} РУБ.')
+
+    def withdraw(self, amount):
+        # self.amount = amount
+        if amount > self.balance:
+            print('Недостаточно средств')
+        else:
+            self.balance = self.balance - amount
+            print(f'ПОКУПКА. -{amount} РУБ. Ваш новый баланс: {self.balance} РУБ.')
+
+
+    def sms(self):
+        print(f'{self.owner}, Ваш баланс составляет {self.balance} РУБ.')
+
+
+class PremiumAccount(BankAccount):
+    def __init__(self, owner, balance):
+        super().__init__(owner, balance)
+
+    def withdraw(self, amount):
+        # self.amount = amount
+        if self.balance - amount > -1000:
+            self.balance = self.balance - amount
+            print(f'ПОКУПКА. -{amount} РУБ. Ваш новый баланс: {self.balance} РУБ.')
+        else:
+            print('Недостаточно средств')
+
+
+
+bank1 = BankAccount('Genry', 23500)
+prembank1 = PremiumAccount('Petr', 500)
+# bank1.sms()
+# bank1.deposit(1000000)
+# bank1.withdraw(60000)
+# bank1.withdraw(1000000000)
+# prembank1.sms()
+# prembank1.deposit(100)
+# prembank1.withdraw(700)
+# prembank1.withdraw(1000)
+
+
+#===== Task 10 =====
+# Game Character + Weapon Сделай: Weapon: damage
+# Character:name self.weapon = Weapon(...) метод attack() использует урон оружия
+class Weapon():
+    def __init__(self, damage = 100):
+        self.damage = damage
+
+
+class Character():
+    def __init__(self, name):
+        self.name = name
+        self.weapon = Weapon()
+
+    def attack(self):
+        print(f'Атака {self.name} составляет {self.weapon.damage} урона')
+
+    def info(self):
+        print(f'Вы выбрали персонажа {self.name}')
+
+print('---ДОБРО ПОЖАЛОВАТЬ В ИГРУ---')
+print('---ГЕНДАЛЬФ НА КОНЕ---')
+char1 = Character('Gendalf')
+char1.info()
+char1.attack()
