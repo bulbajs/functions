@@ -1016,3 +1016,11 @@ print('---ГЕНДАЛЬФ НА КОНЕ---')
 char1 = Character('Gendalf')
 char1.info()
 char1.attack()
+
+
+list = [1,2,4,5]
+count = 0
+for i in list:
+    print(type(i))
+    count= i + count
+print(count)
