@@ -1025,8 +1025,45 @@ prembank1 = PremiumAccount('Petr', 500)
 #     count= i + count
 # print(count)
 
-def calc(a,b):
-    print(a+b)
+# def calc(a,b):
+#     print(a+b)
+#
+#
+# calc(2,2)
+#
+# def greeting(name):
+#     print(f'Welcome, {name}')
+#
+# greeting('Petr')
+#
+# def square(number):
+#     return number*number
+#
+# print(square(5))
 
+# def is_even(number):
+#     if number % 2 == 0:
+#         print(f'{number} - Четное!')
+#     else:
+#         print(f'{number} - Нечетное!')
+#
+# is_even(5)
+# print('--------')
+# is_even(8)
+#
+# def maximum(a,b):
+#     if a>b:
+#         print(a)
+#     else:
+#         print(b)
+#
+# maximum(10,7)
 
-calc(2,2)
+# a = 5
+# b = 10
+# print(max(a,b))
+
+def maxi(a,b):
+    return max(a,b)
+
+print(maxi(7,8))
