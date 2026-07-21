@@ -1063,7 +1063,49 @@ prembank1 = PremiumAccount('Petr', 500)
 # b = 10
 # print(max(a,b))
 
-def maxi(a,b):
-    return max(a,b)
+# def maxi(a,b):
+#     return max(a,b)
+#
+# print(maxi(7,8))
+#
+# def greet(name='Гость'):
+#     print (f'Здравствуйте, {name}!')
+#
+# greet()
+# greet('Petr')
 
-print(maxi(7,8))
+# def sum_list(numbers):
+#     total = 0
+#     for i in numbers:
+#         total += i
+#     return total
+#
+#
+# result = sum_list([1,2,3,4,5])
+# print(result)
+
+# def count_vowels(text):
+#     k = 0
+#     for i in text.lower():
+#         if i in ('а','е','ё','и','о','у','э','ю','я'):
+#             k = k + 1
+#             print(k)
+#     return k
+#
+# res = count_vowels('КИлиманджаро')
+# print(f'Сумма гласных в слове Килиманджаро = {res}')
+
+a = ('Артем')
+print(a)
+a = list(a)
+tmp = 0
+print(type(a))
+for i in range(len(a)//2):
+    tmp = a[i]
+    a[i] = a[len(a)-1-i]
+    a[len(a) - 1 - i] = tmp
+    print(a)
+    print('---')
+print(''.join(a))
+
+
