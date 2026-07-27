@@ -1095,17 +1095,31 @@ prembank1 = PremiumAccount('Petr', 500)
 # res = count_vowels('КИлиманджаро')
 # print(f'Сумма гласных в слове Килиманджаро = {res}')
 
-a = ('Артем')
-print(a)
-a = list(a)
-tmp = 0
-print(type(a))
-for i in range(len(a)//2):
-    tmp = a[i]
-    a[i] = a[len(a)-1-i]
-    a[len(a) - 1 - i] = tmp
-    print(a)
-    print('---')
-print(''.join(a))
+# a = ('Артем')
+# print(a)
+# a = list(a)
+# tmp = 0
+# print(type(a))
+# for i in range(len(a)//2):
+#     tmp = a[i]
+#     a[i] = a[len(a)-1-i]
+#     a[len(a) - 1 - i] = tmp
+#     print(a)
+#     print('---')
+# print(''.join(a))
 
+text = ['кот','собака','кит','Папироска','ток']
+def find_longest(words):
+    champ = ''
+    max = 0
+    for word in words:
+        if len(word) > max:
+            max = len(word)
+            champ = word
+    print (f'Самое длинное слово "{champ}", длиной {max} букв')
+
+
+words = ['кот','собака','кит','Папироска','ток']
+
+find_longest(words)
 
