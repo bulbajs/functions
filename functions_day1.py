@@ -1108,18 +1108,58 @@ prembank1 = PremiumAccount('Petr', 500)
 #     print('---')
 # print(''.join(a))
 
-text = ['кот','собака','кит','Папироска','ток']
-def find_longest(words):
-    champ = ''
-    max = 0
-    for word in words:
-        if len(word) > max:
-            max = len(word)
-            champ = word
-    print (f'Самое длинное слово "{champ}", длиной {max} букв')
+# text = ['кот','собака','кит','Папироска','ток']
+# def find_longest(words):
+#     champ = ''
+#     max = 0
+#     for word in words:
+#         if len(word) > max:
+#             max = len(word)
+#             champ = word
+#     print (f'Самое длинное слово "{champ}", длиной {max} букв')
+#
+#
+# words = ['кот','собака','кит','Папироска','ток']
+#
+# find_longest(words)
+
+# def calculate_delta_t(t_in, t_out):
+#     delta = t_in - t_out
+#     if delta < 0 :
+#         print('Все нормально')
+#     return delta
+#
+# ter = calculate_delta_t(2,10)
+# print(f'Разница между температурами равна {ter}C')
+
+# def average(numbers):
+#     total = 0
+#     for number in numbers:
+#         total = total + number
+#     avg = total/len(numbers)
+#     return avg
+#
+# avg1 = average([1,2,3])
+# print(avg1)
+
+# def find_min(numbers):
+# numbers = [1,2,3]
+# for number in range(len(numbers)):
+#     print(numbers[number])
 
 
-words = ['кот','собака','кит','Папироска','ток']
 
-find_longest(words)
+# a = find_min([1,2,3])
+# print(a)
+#
+# numbers = [5,2,3]
+# min = numbers[0]
+# print(min)
+# for number in numbers[1:]:
+#     if number < min:
+#         min = number
+#         print(min,'+++')
 
+
+numbers = [2,5,6,8,9,4,7,10]
+print(numbers[-1:2:-1])
