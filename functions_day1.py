@@ -1143,23 +1143,24 @@ prembank1 = PremiumAccount('Petr', 500)
 # print(avg1)
 
 # def find_min(numbers):
-# numbers = [1,2,3]
-# for number in range(len(numbers)):
-#     print(numbers[number])
-
-
-
-# a = find_min([1,2,3])
-# print(a)
+#     min = numbers[0]
+#     for number in numbers[1:]:
+#         if number < min:
+#             min = number
+#     return min
 #
-# numbers = [5,2,3]
-# min = numbers[0]
-# print(min)
-# for number in numbers[1:]:
-#     if number < min:
-#         min = number
-#         print(min,'+++')
+#
+# find1 = find_min([2,5,6,8,9,4,7,10])
+# print(find1)
 
 
-numbers = [2,5,6,8,9,4,7,10]
-print(numbers[-1:2:-1])
+def count_positive(numbers):
+    total = 0
+    for number in numbers:
+        if number > 0:
+            total += number
+    return total
+
+
+sum1 = count_positive([1,2,-1])
+print(sum1)
