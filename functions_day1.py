@@ -1164,3 +1164,11 @@ def count_positive(numbers):
 
 sum1 = count_positive([1,2,-1])
 print(sum1)
+
+def replace(text):
+    text = '-'.join(text)
+    return text
+
+a = replace('A B C')
+
+print(a)
